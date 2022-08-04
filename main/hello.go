@@ -37,5 +37,6 @@ func main() {
 	// call overviewgo module
 	overviewgo.ShowMyMap()
 	overviewgo.ShowMySlice()
+	overviewgo.ShowInfo()
 
 }
