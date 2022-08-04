@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"bookable24.de/greetings" // TODO : $GOPATH => BrokenImport
-	"bookable24.de/overviewgo"
+	"bookable24.de/main/greetings"
+	"bookable24.de/main/overviewgo"
 )
 
 func main() {

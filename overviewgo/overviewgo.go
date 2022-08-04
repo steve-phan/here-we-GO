@@ -83,7 +83,7 @@ func ShowInfo() {
 		Breed: "Phu Quoc",
 		Legs:  4,
 	}
-	ShowAnimalsInfo(myDog)
+	ShowAnimalsInfo(&myDog)
 
 	fmt.Println("my Dog issssssss ", myDog.Breed)
 
@@ -91,10 +91,10 @@ func ShowInfo() {
 
 // These 2 methods means type Dog implements the interface Animal,
 // but we don't need to explicitly declare that it does so.
-func (t Dog) SayHi() string {
+func (t *Dog) SayHi() string {
 	return "Woh woh"
 }
 
-func (t Dog) SayBye() string {
+func (t *Dog) SayBye() string {
 	return "Grrrrrrrrrrrrrr"
 }
