@@ -5,13 +5,14 @@ import (
 	"log"
 
 	"bookable24.de/greetings" // TODO : $GOPATH => BrokenImport
+	"bookable24.de/overviewgo"
 )
 
 func main() {
 	// Set properties of the predefined Logger, including
 	// the log entry prefix and a flag to disable printing
 	// the time, source file, and line number.
-	log.SetPrefix("Greetings:   ")
+	log.SetPrefix("Show:   ")
 	log.SetFlags(0)
 
 	// A slice of names.
@@ -32,4 +33,8 @@ func main() {
 	// message | messages to the console.
 	// fmt.Println(message)
 	fmt.Println(messages)
+
+	// call overviewgo module
+	overviewgo.ShowMyMap()
+
 }
