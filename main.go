@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	"bookable24.de/main/handlejson"
 	"bookable24.de/main/helpers"
 )
 
@@ -24,7 +25,7 @@ func main() {
 	// the log entry prefix and a flag to disable printing
 	// the time, source file, and line number.
 	// log.SetPrefix("Show:   ")
-	// log.SetFlags(0)
+	log.SetFlags(0)
 
 	// A slice of names.
 	// names := []string{"Teddy", "Luna", "Lily"}
@@ -50,11 +51,12 @@ func main() {
 	// overviewgo.ShowMySlice()
 	// overviewgo.ShowInfo()
 
-	intChan := make(chan int)
-	defer close(intChan)
+	// intChan := make(chan int)
+	// defer close(intChan)
 
-	go CaculateValue(intChan)
+	// go CaculateValue(intChan)
 
-	log.Println(<-intChan)
+	// log.Println(<-intChan)
+	handlejson.ParseJson()
 
 }
