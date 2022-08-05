@@ -9,3 +9,5 @@ go 1.19
 // replace bookable24.de/greetings => ./greetings
 
 // replace bookable24.de/overviewgo => ./overviewgo
+
+require github.com/joho/godotenv v1.4.0 // indirect

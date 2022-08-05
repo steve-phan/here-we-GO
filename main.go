@@ -2,9 +2,11 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"bookable24.de/main/handlejson"
 	"bookable24.de/main/helpers"
+	"github.com/joho/godotenv"
 )
 
 // "fmt"
@@ -58,5 +60,14 @@ func main() {
 
 	// log.Println(<-intChan)
 	handlejson.ParseJson()
+
+	// Loading env
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error, loading env fail")
+	}
+	// Get Key
+	key := os.Getenv("SUPER_KEY")
+	log.Println("KEY", key)
 
 }
