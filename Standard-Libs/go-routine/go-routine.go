@@ -26,8 +26,11 @@ func main() {
 
 func countLeng(str string) {
 
-	for i := 0; i < len(str); i++ {
-		fmt.Println(string(str[i]))
+	// for i := 0; i < len(str); i++ {
+	// 	fmt.Println(string(str[i]))
+	// }
+	for _, char := range str {
+		fmt.Println(string(char))
 	}
 
 }
