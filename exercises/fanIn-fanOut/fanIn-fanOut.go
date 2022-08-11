@@ -31,8 +31,8 @@ func main() {
 	sum := 0
 	for i := 0; i < 4; i++ {
 		sum = sum + <-c
-		fmt.Println(<-c)
 	}
+
 	fmt.Printf("Them sqrt number of %v is %v", sqrtNumber, sum)
 }
 
@@ -63,6 +63,7 @@ func fanIn(inputChan ...<-chan int) <-chan int {
 	go func() {
 		for _, c := range inputChan {
 			for n := range c {
+				fmt.Println(n)
 				in <- n
 			}
 		}

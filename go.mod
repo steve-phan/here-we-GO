@@ -10,4 +10,7 @@ go 1.19
 
 // replace bookable24.de/overviewgo => ./overviewgo
 
-require github.com/joho/godotenv v1.4.0 // indirect
+require (
+	github.com/joho/godotenv v1.4.0 // indirect
+	golang.org/x/tour v0.1.0
+)
