@@ -27,3 +27,5 @@ json.Marshal
 	key := os.Getenv("SUPER_KEY")
 	log.Println("KEY", key)
 ```
+
+3. [Composition vs inheritace](https://www.digitalocean.com/community/tutorials/composition-vs-inheritance)
