@@ -1,65 +1,37 @@
 package abstractfactory
 
-type PropsBasic struct {
+import "fmt"
+
+// import "fmt"
+
+type propsBasic struct {
 	logo  string
 	price int
 }
 
-type MethodsBasic interface {
-	setLogo(logo string)
-	setPrice(price int)
+type methodsBasic interface {
+	// setLogo(logo string)
+	// setPrice(price int)
 	GetLogo() string
 	GetPrice() int
 }
 
-type Phone struct {
-	logo  string
-	price int
-}
-type Table struct {
-	PropsBasic
-}
+// Setter and Getter for both Phone and Table
 
-type IPhone interface {
-	MethodsBasic
-}
-
-type ITable interface {
-	MethodsBasic
-}
-
-// Settter and Getter for phone
-
-func (p *Phone) setLogo(logo string) {
+func (p *propsBasic) setLogo(logo string) {
+	fmt.Println("Creating ....")
 	p.logo = logo
 }
 
-func (p *Phone) setPrice(price int) {
+func (p *propsBasic) setPrice(price int) {
+	fmt.Println("Creating ....")
 	p.price = price
 }
 
-func (p *Phone) GetLogo() string {
+func (p *propsBasic) GetLogo() string {
 	return p.logo
 }
 
-func (p *Phone) GetPrice() int {
+func (p *propsBasic) GetPrice() int {
 	return p.price
 }
-
-// Settter and Getter for table
-
-// func (p *Table) setLogo(logo string) {
-// 	p.logo = logo
-// }
-
-// func (p *Table) setPrice(price int) {
-// 	p.price = price
-// }
-
-// func (p *Table) GetLogo() string {
-// 	return p.logo
-// }
-
-// func (p *Table) GetPrice() int {
-// 	return p.price
-// }
