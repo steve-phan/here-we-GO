@@ -1,7 +1,7 @@
 package mediator
 
 type StationManager struct {
-	TrainQueue []Train
+	trainQueue []Train
 	isFreeSlot bool
 }
 
@@ -11,21 +11,21 @@ func NewStationManager() *StationManager {
 	}
 }
 
-func (s *StationManager) CanArrive(t Train) bool {
+func (s *StationManager) canArrive(t Train) bool {
 	if s.isFreeSlot {
 		s.isFreeSlot = false
 		return true
 	}
-	s.TrainQueue = append(s.TrainQueue, t)
+	s.trainQueue = append(s.trainQueue, t)
 	return false
 }
 
-func (s *StationManager) NotifyAboutDepart() {
+func (s *StationManager) notifyAboutDepart() {
 	if !s.isFreeSlot {
 		s.isFreeSlot = true
 	}
-	if len(s.TrainQueue) > 0 {
-		firstTrainInQueue := s.TrainQueue[0]
+	if len(s.trainQueue) > 0 {
+		firstTrainInQueue := s.trainQueue[0]
 		firstTrainInQueue.PermitArrival()
 	}
 }

@@ -7,7 +7,7 @@ type PassengerTrain struct {
 }
 
 func (p *PassengerTrain) Arrive() {
-	if !p.Mediator.CanArrive(p) {
+	if !p.Mediator.canArrive(p) {
 		fmt.Println("There is no slot, waiting ...")
 		return
 	}
@@ -16,7 +16,7 @@ func (p *PassengerTrain) Arrive() {
 
 func (p *PassengerTrain) Depart() {
 	fmt.Println("PassengerTrain: Leaving")
-	p.Mediator.NotifyAboutDepart()
+	p.Mediator.notifyAboutDepart()
 }
 
 func (p *PassengerTrain) PermitArrival() {
